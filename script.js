@@ -24,3 +24,25 @@ for (let i = 0; i < size; i++) {
     //once selected remove the object from temp array
     tempArray.splice(randomIndex, 1);
 }
+
+
+ //Cards
+ cards = document.querySelectorAll(".container");
+ cards.forEach((card) => {
+   card.addEventListener("click", () => {
+     //If selected card is not matched yet then only run (i.e already matched card when clicked would be ignored)
+     if (!card.classList.contains("matched")) {
+       //flip the clicked card
+       card.classList.add("flipped");
+       //if it is the firstcard (!firstCard since firstCard is initially false)
+       if (!firstCard) {
+//Start game
+startButton.addEventListener("click", () => {
+    movesCount = 0;
+    
+})
+startButton.classList.add("hide");
+
+
+//Initialize values and func calls
+let cardValues = generateRandom();
