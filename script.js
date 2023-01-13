@@ -4,17 +4,17 @@ const cards = document.querySelectorAll(".card");
 //storing cards
 //declaring variables
 let cardOne, cardTwo;
-let cardFlipped = false;
+let flippedCard = false;
 //if else
 
 function flipCard() {
   this.classList.add("flip");
 
-  if (!cardFlipped) {
-    cardFlipped = true;
+  if (!flippedCard) {
+    flippedCard = true;
     cardOne = this;
   } else {
-    cardFlipped = false;
+    flippedCard = false;
     cardTwo = this;
 
     matchCard();
@@ -34,5 +34,10 @@ function flipCard() {
     }
   }
 }
-
+(function shuffleCard() {
+  cards.forEach((card) => {
+    let randomPosition = Math.floor(Math.random() * 12);
+    randomcards = randomPosition;
+  });
+})();
 cards.forEach((card) => card.addEventListener("click", flipCard));
